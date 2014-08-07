@@ -26,7 +26,7 @@ for c in as_int:
 		body+="No Messages!"
 	if bug["files"]!=[]:
 		for i in bug["files"]:
-			body+="<b>File at "+i["url"]+" by "+i["author"]+"</b>\n"
+			body+="<b>File at "+i["url"].replace('/openhatch.org', '/roundup-archive.openhatch.org')+" by "+i["author"]+"</b>\n"
 	body+="\n"
 	body+="Status : <b>"+bug["status"]+"</b>\n"
 	body+="Nosy List : <b>"
@@ -44,7 +44,7 @@ for c in as_int:
 	body+="Priority: <b>"+bug["priority"]+"</b>\n"
 	if bug["waitingon"]:
 		body+="Waiting On: <b>#"+bug["waitingon"]+"</b>\n"
-	body+="Roundup ID: <b>"+bug["id"]+"</b>\n"
+	body+="Roundup ID: <b>"+bug["id"]+"</b> (<a href='http://roundup-archive.openhatch.org/bugs/issue" + bug["id"] + "'>archived</a>)\n"
 	body+="Last modified: <b>"+bug["lastmodified"]+"</b>\n"
 
 	req = urllib2.Request('https://api.github.com/repos/' + username + '/' + repo + '/issues?access_token='+oauth_token,
