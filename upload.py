@@ -33,7 +33,7 @@ for c in as_int:
 	for i in bug["nosylist"]:
 		body += "  "+i+" "
 	body+="</b>\n"
-	labels=bug["keywords"]
+	labels=map(lambda x: x.strip(), ''.join(bug["keywords"]).split(','))
 	labels.append("imported")
 	labels.append(bug["priority"])
 	labels.append(bug["status"])
