@@ -19,7 +19,7 @@ for c in as_int:
 	
 	if bug["history"]!=[]:
 		for i in bug["history"]:
-			body+="<b>Comment by "+i["author"]+":</b><dl><dd>\n"
+			body+="<b>Comment by "+i["author"]+":</b><dl><dd>"
 			body+=i["message"]
 			body+="</dl></dd><hr/>\n\n"
 	else:
