@@ -62,6 +62,7 @@ files=root.find_class("files")
 messages=root.find_class("messages")
 issue["files"]=[]
 issue["history"]=[]
+issue["lastmodified"] = root.xpath('/html/body/table/tbody/tr[3]/td/div/p/b[3]')[0].text.strip()
 if messages !=None and messages!=[]:
 	messages=messages[0][0]
 	messages=messages[1:]

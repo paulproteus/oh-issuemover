@@ -41,10 +41,11 @@ for c in as_int:
 		labels.append("milestone:"+bug["milestone"])
 	if bug["superceder"]:
 		body+="Superceder : <b>#"+bug["superceder"]+"</b>\n"
-	body+="Priority : <b>"+bug["priority"]+"</b>\n"
+	body+="Priority: <b>"+bug["priority"]+"</b>\n"
 	if bug["waitingon"]:
-		body+="Waiting On : <b>#"+bug["waitingon"]+"</b>\n"
-	body+="Roundup ID : <b>"+bug["id"]+"</b>\n"
+		body+="Waiting On: <b>#"+bug["waitingon"]+"</b>\n"
+	body+="Roundup ID: <b>"+bug["id"]+"</b>\n"
+	body+="Last modified: <b>"+bug["lastmodified"]+"</b>\n"
 
 	req = urllib2.Request('https://api.github.com/repos/' + username + '/' + repo + '/issues?access_token='+oauth_token,
 			json.dumps({
