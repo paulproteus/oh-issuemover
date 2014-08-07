@@ -1,4 +1,4 @@
-oauth_token="74aba8524476083e805734e59784693fffdc960a"
+oauth_token="38ee6a10e3491b86a73c0ecec647fdc22eb41ac0"
 username='imported-from-roundup'
 repo='test'
 
