@@ -51,7 +51,6 @@ for c in as_int:
 			json.dumps({
 				'title':bug["title"],
 				'body':body,
-				'asignee':bug["assigned"],
 				'labels':labels
 			})
 		)
