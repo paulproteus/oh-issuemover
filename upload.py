@@ -46,7 +46,7 @@ for c in as_int:
 	body+="Priority: <b>"+bug["priority"]+"</b>\n"
 	if bug["waitingon"]:
 		body+="Waiting On: <b>#"+bug["waitingon"]+"</b>\n"
-	body+="Roundup ID: <b>"+bug["id"]+"</b> (<a href='http://roundup-archive.openhatch.org/bugs/issue" + bug["id"] + "'>archived</a>)\n"
+	body+="Imported from roundup ID: <b>"+bug["id"]+"</b> (<a href='http://roundup-archive.openhatch.org/bugs/issue" + bug["id"] + "'>view archived page</a>)\n"
 	body+="Last modified: <b>"+bug["lastmodified"]+"</b>\n"
 
 	req = urllib2.Request('https://api.github.com/repos/' + username + '/' + repo + '/issues?access_token='+oauth_token,
