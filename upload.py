@@ -28,8 +28,8 @@ for c in as_int:
 		for i in bug["files"]:
 			body+="<b>File at "+i["url"].replace('/openhatch.org', '/roundup-archive.openhatch.org')+" by "+i["author"]+"</b>\n"
 	body+="\n"
-	body+="Status : <b>"+bug["status"]+"</b>\n"
-	body+="Nosy List : <b>"
+	body+="Status: <b>"+bug["status"]+"</b>\n"
+	body+="Nosy List: <b>"
 	for i in bug["nosylist"]:
 		body += "  "+i+" "
 	body+="</b>\n"
