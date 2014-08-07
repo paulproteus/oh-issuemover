@@ -46,7 +46,7 @@ for i in r.frame.toHtml():
 root = html.fromstring(
 		result
 	)
-time.sleep(0.5)
+#time.sleep(0.5)
 
 issue={"id":str(issueNumber)}
 issue["title"]=xp("/html/body/table/tbody/tr[3]/td/div/form/table/tbody/tr[1]/td")
