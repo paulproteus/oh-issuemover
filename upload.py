@@ -25,8 +25,6 @@ for c in as_int:
 	if bug["files"]!=[]:
 		for i in bug["files"]:
 			body+="<b>File at "+i["url"]+" by "+i["author"]+"</b>\n"
-	else:
-		body+="No Files!\n"
 	body+="\n"
 	body+="Status : <b>"+bug["status"]+"</b>\n"
 	body+="Nosy List : <b>"
