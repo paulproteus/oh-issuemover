@@ -49,6 +49,9 @@ for c in as_int:
 	body+="Imported from roundup ID: <b>"+bug["id"]+"</b> (<a href='http://roundup-archive.openhatch.org/bugs/issue" + bug["id"] + "'>view archived page</a>)\n"
 	body+="Last modified: <b>"+bug["lastmodified"]+"</b>\n"
 
+	# Remove blank labels
+	labels = [x for x in labels if x]
+
 	req = urllib2.Request('https://api.github.com/repos/' + username + '/' + repo + '/issues?access_token='+oauth_token,
 			json.dumps({
 				'title':bug["title"],
