@@ -1,4 +1,6 @@
 oauth_token="74aba8524476083e805734e59784693fffdc960a"
+username='imported-from-roundup'
+repo='test'
 
 import urllib2, json
 import glob
@@ -42,7 +44,7 @@ for c in as_int:
 	body+="Waiting On : <b>"+bug["waitingon"]+"</b>\n"
 	body+="Roundup ID : <b>"+bug["id"]+"</b>\n"
 
-	req = urllib2.Request('https://api.github.com/repos/paulproteus/test-bug-import/issues?access_token='+oauth_token,
+	req = urllib2.Request('https://api.github.com/repos/' + username + '/' + repo + '/issues?access_token='+oauth_token,
 			json.dumps({
 				'title':bug["title"],
 				'body':body,
@@ -51,7 +53,7 @@ for c in as_int:
 			})
 		)
 	resp = json.load(urllib2.urlopen(req))
-	req = urllib2.Request('https://api.github.com/repos/paulproteus/test-bug-import/issues/'+str(resp["number"])+'?access_token='+oauth_token,
+	req = urllib2.Request('https://api.github.com/repos/' + username + '/' + repo + '/issues/'+str(resp["number"])+'?access_token='+oauth_token,
 			json.dumps({
 				'state':openClosed
 			})
