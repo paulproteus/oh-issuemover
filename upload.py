@@ -18,7 +18,7 @@ for c in as_int:
 		openClosed='closed'
 	
 	if bug["history"]!=[]:
-		for i in bug["history"]:
+		for i in reversed(bug["history"]):
 			body+="<b>Comment by "+i["author"]+":</b><dl><dd>"
 			body+=i["message"]
 			body+="</dl></dd><hr/>\n\n"
