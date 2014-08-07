@@ -34,6 +34,8 @@ for c in as_int:
 		body += "  "+i+" "
 	body+="</b>\n"
 	labels=map(lambda x: x.strip(), ''.join(bug["keywords"]).split(','))
+	if labels == ['']:
+		labels = []
 	labels.append("imported")
 	labels.append(bug["priority"])
 	labels.append(bug["status"])
