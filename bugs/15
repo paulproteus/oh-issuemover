@@ -1,1 +1,0 @@
-{"status": "resolved", "priority": "bug", "title": "In /search/, display an animated throbber while retrieving results.", "milestone": "", "superceder": "", "nosylist": ["rafpaf"], "assigned": "rafpaf", "waitingon": "", "keywords": [], "id": "15", "files": [], "history": [{"message": "we have a progress bar\n   \n", "author": "rafpaf"}]}
