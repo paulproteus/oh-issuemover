@@ -1,6 +1,6 @@
 oauth_token="38ee6a10e3491b86a73c0ecec647fdc22eb41ac0"
-username='imported-from-roundup'
-repo='test'
+username='openhatch'
+repo='oh-mainline'
 
 import urllib2, json
 import glob
